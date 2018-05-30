@@ -40,20 +40,20 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 1. git clone https://github.com/Azure-Samples/event-grid-python-public-consume-events.git
 2. cd event-grid-python-public-consume-events
 3. pipenv install
-4. Rename the file `env_template` to `.env` and update the correct values inside with your
+4. For Management only, rename the file `env_template` to `.env` and update the correct values inside with your
    subscription ID and [Azure Service Principal credentials](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
-## Demo
+## Running the samples
 
-A demo app is included to show how to use the project.
+# Management
 
-To run the demo, follow these steps:
+`create_eg_topics_and_event_subscriptions.py` will create an EventGrid on Azure, a Topic, and a EventSubscription. 
 
-(Add steps to start up the demo)
+In order for this sample to work, you will need to have a valid `.env` file (see previous section).
 
-1.
-2.
-3.
+Run the sample : `pipenv run create_eg_topics_and_event_subscriptions.py`
+
+# Data plane
 
 ## Resources
 
