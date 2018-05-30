@@ -1,0 +1,10 @@
+# Rename this file to ".env" to be auto-loaded by Pipenv and update the values
+#
+# To run the sample, you must first create an Azure service principal. To create the service principal, follow one of these guides:
+# Azure Portal: https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/)
+# PowerShell: https://azure.microsoft.com/documentation/articles/resource-group-authenticate-service-principal/
+# Azure CLI: https://azure.microsoft.com/documentation/articles/resource-group-authenticate-service-principal-cli/
+AZURE_SUBSCRIPTION_ID=11111111-1111-1111-1111-111111111111
+AZURE_CLIENT_ID=11111111-1111-1111-1111-111111111111
+AZURE_CLIENT_SECRET=AZURE_CLIENT_SECRET
+AZURE_TENANT_ID=common

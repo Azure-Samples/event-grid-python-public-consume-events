@@ -1,40 +1,47 @@
-# Project Name
+---
+services: event-grid
+platforms: python
+author: kalyanaj, lmazuel
+---
 
-(short, 1-3 sentenced, description of the project)
+# Microsoft Azure Event Grid Publish/Consume Samples for Python
+
+This contains Python samples for publishing events to Azure Event Grid and consuming events from Azure Event Grid. It also contains a set of management samples that demonstrates how to manage topics and event subscriptions.
 
 ## Features
 
-This project framework provides the following features:
+These samples demonstrates the following features:
 
-* Feature 1
-* Feature 2
-* ...
+Data Plane:
+
+* How to publish events to Azure Event Grid.
+* How to consume events delivered by Azure Event Grid.
+
+The above two samples use the Event Grid data plane SDK [azure-eventgrid](https://pypi.org/project/azure-eventgrid/).
+
+Management Plane:
+
+* How to create a topic and an event subscription to a topic.
+* How to create an event subscription to a Storage account.
+* How to create an event subscription to an Azure subscription / Resource Group.
+
+The above three samples use the Event Grid management plane SDK [azure-mgmt-eventgrid](https://pypi.org/project/azure-mgmt-eventgrid/)
 
 ## Getting Started
 
 ### Prerequisites
 
-(ideally very short, if any)
+- Python 2.7, 3.4 or higher.
+- [Pipenv](https://docs.pipenv.org/). If you don't have it, follow the [pipenv installation tutorial](https://docs.pipenv.org/#install-pipenv-today).
 
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
 
 ### Quickstart
-(Add steps to get up and running quickly)
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
+1. git clone https://github.com/Azure-Samples/event-grid-python-public-consume-events.git
+2. cd event-grid-python-public-consume-events
+3. pipenv install
+4. Rename the file `env_template` to `.env` and update the correct values inside with your
+   subscription ID and [Azure Service Principal credentials](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ## Demo
 
@@ -50,8 +57,5 @@ To run the demo, follow these steps:
 
 ## Resources
 
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+- https://docs.microsoft.com/azure/event-grid/overview
+- https://docs.microsoft.com/python/api/overview/azure/event-grid
