@@ -45,13 +45,25 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
 ## Running the samples
 
-# Management
+### Management
 
-`create_eg_topics_and_event_subscriptions.py` will create an EventGrid on Azure, a Topic, and a EventSubscription. 
+1. `create_eg_topics_and_event_subscriptions.py` creates a new event subscription for an Event Grid Topic, and send it to a webhook
 
 In order for this sample to work, you will need to have a valid `.env` file (see previous section).
 
 Run the sample : `pipenv run create_eg_topics_and_event_subscriptions.py`
+
+1. `create_storage_event_subscriptions.py` creates a new event subscription for a storage account, filtering jpg creation, and send it to an Relay Hybrid Connection
+
+In order for this sample to work, you will need to have a valid `.env` file (see previous section).
+
+Run the sample : `pipenv run create_storage_event_subscriptions.py`
+
+1. `create_arm_event_subscriptions.py` creates a new event subscription for an Azure Subscription and send it to a Storage Queue
+
+In order for this sample to work, you will need to have a valid `.env` file (see previous section).
+
+Run the sample : `pipenv run create_arm_event_subscriptions.py`
 
 # Data plane
 
