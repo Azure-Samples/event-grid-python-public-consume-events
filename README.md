@@ -49,21 +49,21 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
 1. `create_eg_topics_and_event_subscriptions.py` creates a new event subscription for an Event Grid Topic, and send it to a webhook
 
-In order for this sample to work, you need to have a valid `.env` file (see previous section).
+   In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
-Run the sample : `pipenv run python create_eg_topics_and_event_subscriptions.py`
+   Run the sample : `pipenv run python create_eg_topics_and_event_subscriptions.py`
 
-1. `create_storage_event_subscriptions.py` creates a new event subscription for a storage account, filtering jpg creation, and send it to an Relay Hybrid Connection
+2. `create_storage_event_subscriptions.py` creates a new event subscription for a storage account, filtering jpg creation, and send it to an Relay Hybrid Connection
 
-In order for this sample to work, you need to have a valid `.env` file (see previous section).
+   In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
-Run the sample : `pipenv run python create_storage_event_subscriptions.py`
+   Run the sample : `pipenv run python create_storage_event_subscriptions.py`
 
-1. `create_arm_event_subscriptions.py` creates a new event subscription for an Azure Subscription and send it to a Storage Queue
+3. `create_arm_event_subscriptions.py` creates a new event subscription for an Azure Subscription and send it to a Storage Queue
 
-In order for this sample to work, you need to have a valid `.env` file (see previous section).
+   In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
-Run the sample : `pipenv run python create_arm_event_subscriptions.py`
+   Run the sample : `pipenv run python create_arm_event_subscriptions.py`
 
 ### Data plane
 
@@ -74,7 +74,7 @@ Run the sample : `pipenv run python create_arm_event_subscriptions.py`
 
    Run the sample : `pipenv run python event_grid_publisher.py`
 
-1. You can deploy the `ConsumerFunction` folder to an Azure Function using [VSCode](https://aka.ms/vscode-azure-functions), this folder is ready to deploy. See the Readme in that directory for details.
+2. You can deploy the `ConsumerFunction` folder to an Azure Function using [VSCode](https://aka.ms/vscode-azure-functions), this folder is ready to deploy. See the Readme in that directory for details.
 
    If you just want the code, look at `ConsumerFunction/ConsumerFunction/run.py` which is the code to receive and event from EventGrid
 
