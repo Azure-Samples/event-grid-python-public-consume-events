@@ -49,19 +49,19 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
 1. `create_eg_topics_and_event_subscriptions.py` creates a new event subscription for an Event Grid Topic, and send it to a webhook
 
-In order for this sample to work, you will need to have a valid `.env` file (see previous section).
+In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
 Run the sample : `pipenv run create_eg_topics_and_event_subscriptions.py`
 
 1. `create_storage_event_subscriptions.py` creates a new event subscription for a storage account, filtering jpg creation, and send it to an Relay Hybrid Connection
 
-In order for this sample to work, you will need to have a valid `.env` file (see previous section).
+In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
 Run the sample : `pipenv run create_storage_event_subscriptions.py`
 
 1. `create_arm_event_subscriptions.py` creates a new event subscription for an Azure Subscription and send it to a Storage Queue
 
-In order for this sample to work, you will need to have a valid `.env` file (see previous section).
+In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
 Run the sample : `pipenv run create_arm_event_subscriptions.py`
 
@@ -70,11 +70,11 @@ Run the sample : `pipenv run create_arm_event_subscriptions.py`
 1. `event_grid_publisher.py` publishes a custom event to a Topic. Topic might be created by the initial sample `create_eg_topics_and_event_subscriptions.py`
    or [CLI](https://docs.microsoft.com/azure/event-grid/custom-event-quickstart#create-a-custom-topic).
 
-   In order for this sample to workm you will need an Event Grid Topic and a Key (replace global variable in the script)
+   In order for this sample to work, you need an Event Grid Topic and a Key (replace global variable in the script)
 
 1. You can deploy the `ConsumerFunction` folder to an Azure Function using [VSCode](https://aka.ms/vscode-azure-functions), this folder is ready to deploy. See the Readme in that directory for details.
 
-   If you just want the code, look at `ConsumerFunction/ConsumerFunction/run.py` which is the code receive and event from EventGrid
+   If you just want the code, look at `ConsumerFunction/ConsumerFunction/run.py` which is the code to receive and event from EventGrid
 
    Creating an Azure Function is out of the scope of this sample, you can follow [CLI tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli)
    or [Portal tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function) or using [VSCode](https://aka.ms/vscode-azure-functions).
