@@ -41,6 +41,7 @@ def run_example():
         TOPIC_ENDPOINT,
         events=build_events_list()
     )
+    print("Published events to Event Grid.")
 
 if __name__ == "__main__":
     run_example()
