@@ -5,9 +5,12 @@ name = "pypi"
 
 [packages]
 azure-eventgrid = "*"
-azure-mgmt-eventgrid = "*"
+azure-mgmt-eventgrid = ">=2.0.0rc1"
 azure-mgmt-resource = "*"
 haikunator = "*"
 
 [dev-packages]
 pylint = "*"
+
+[pipenv]
+allow_prereleases = true

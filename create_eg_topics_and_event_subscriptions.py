@@ -1,16 +1,14 @@
-import logging
 import os
-import time
-import uuid
 from haikunator import Haikunator
 
 from azure.common.credentials import ServicePrincipalCredentials
 
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.eventgrid import EventGridManagementClient
-from azure.mgmt.eventgrid.models import Topic, EventSubscriptionFilter, EventSubscription, EventSubscriptionDestination, WebHookEventSubscriptionDestination
+from azure.mgmt.eventgrid.models import Topic, EventSubscriptionFilter, EventSubscription, WebHookEventSubscriptionDestination
 
 # If you wish to debug
+# import logging
 # logging.basicConfig(level=logging.DEBUG)
 
 _haikunator = Haikunator()
@@ -74,8 +72,10 @@ def run_example():
     topic_result_async_poller = event_grid_client.topics.create_or_update(
         resource_group.name,
         TOPIC_NAME,
-        location=resource_group.location,
-        tags={'key1': 'value1', 'key2': 'value2'},
+        Topic(
+            location=resource_group.location,
+            tags={'key1': 'value1', 'key2': 'value2'}
+        )
     )
     # Blocking call for the Topic to be created
     topic = topic_result_async_poller.result()  # type: Topic

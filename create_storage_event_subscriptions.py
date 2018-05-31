@@ -1,16 +1,14 @@
-import logging
 import os
-import time
-import uuid
 from haikunator import Haikunator
 
 from azure.common.credentials import ServicePrincipalCredentials
 
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.eventgrid import EventGridManagementClient
-from azure.mgmt.eventgrid.models import Topic, EventSubscriptionFilter, EventSubscription, EventSubscriptionDestination, HybridConnectionEventSubscriptionDestination
+from azure.mgmt.eventgrid.models import Topic, EventSubscriptionFilter, EventSubscription, HybridConnectionEventSubscriptionDestination
 
 # If you wish to debug
+# import logging
 # logging.basicConfig(level=logging.DEBUG)
 
 _haikunator = Haikunator()

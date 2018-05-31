@@ -45,7 +45,7 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
 ## Running the samples
 
-### Management
+### Management Plane
 
 1. `create_eg_topics_and_event_subscriptions.py` creates a new event subscription for an Event Grid Topic, and send it to a webhook
 
@@ -65,7 +65,9 @@ In order for this sample to work, you will need to have a valid `.env` file (see
 
 Run the sample : `pipenv run create_arm_event_subscriptions.py`
 
-# Data plane
+### Data plane
+
+
 
 ## Resources
 

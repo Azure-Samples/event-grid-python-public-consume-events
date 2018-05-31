@@ -1,16 +1,14 @@
-import logging
 import os
-import time
-import uuid
 from haikunator import Haikunator
 
 from azure.common.credentials import ServicePrincipalCredentials
 
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.eventgrid import EventGridManagementClient
-from azure.mgmt.eventgrid.models import Topic, EventSubscriptionFilter, EventSubscription, EventSubscriptionDestination, StorageQueueEventSubscriptionDestination
+from azure.mgmt.eventgrid.models import Topic, EventSubscriptionFilter, EventSubscription, StorageQueueEventSubscriptionDestination
 
 # If you wish to debug
+# import logging
 # logging.basicConfig(level=logging.DEBUG)
 
 _haikunator = Haikunator()
@@ -68,7 +66,7 @@ def run_example():
     print_item(resource_group)
 
     # Creating an event subscription to storage account {StorageAccountResourceId} with destination as {HybridConnectionResourceId}
-    print('\nCreating an event subscription to storage account {} with destination as {}'.format(STORAGE_ACOUNT_RESOURCE_ID, HYBRID_CONNECTION_RESOURCE_ID))
+    print('\nCreating an event subscription to storage account {} with destination as {}'.format(STORAGE_ACOUNT_RESOURCE_ID, QUEUE_NAME))
 
     # Scope could be any ARM resource ID that supports EventGrid
     # https://docs.microsoft.com/azure/event-grid/event-sources
