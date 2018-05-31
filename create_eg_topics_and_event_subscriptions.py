@@ -25,7 +25,7 @@ TOPIC_NAME = "topicsample-" + _haikunator.haikunate(delimiter='')
 
 # Replace the endpoint URL with the URL of your Azure function, or whatever endpoint you want to sent the event.
 # See the EventGridConsumer sample for a sample of an Azure function that can handle EventGridEvents
-# Publish the EventGridConsumer sample as an Azure function and use the URL of that function for the below.
+# Publish the ConsumerFunction sample as an Azure function and use the URL of that function for the below.
 #
 # Your endpoint will be validated, see https://aka.ms/esvalidation for details
 ENDPOINT_URL = "replace with your Azure function-URL that support validation"
@@ -83,10 +83,10 @@ def run_example():
 
     # Get the keys for the topic
     print('\nGetting the topic keys...')
-    keys = event_grid_client.topics.list_shared_access_keys(  # type: TopicSharedAccessKeys
+    keys = event_grid_client.topics.list_shared_access_keys(
         resource_group.name,
         topic.name
-    )
+    )  # type: TopicSharedAccessKeys
     print('The key1 value of topic {} is: {}'.format(topic.name, keys.key1))
 
     # Create an event subscription

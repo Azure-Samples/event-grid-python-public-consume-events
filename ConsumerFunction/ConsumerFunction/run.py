@@ -2,7 +2,12 @@ import os
 import json
 
 #
-# This code is designed to be copied/pasted into an Azure Function for Python.
+# This code is designed for Azure Function for Python v1.
+#
+# This could be copied/pasted directly into a Python function,
+# or to be deployed using VSCode
+# https://code.visualstudio.com/tutorials/functions-extension/getting-started
+#
 # Note that Azure Function and Python is considered experimental
 #
 

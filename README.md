@@ -72,7 +72,12 @@ Run the sample : `pipenv run create_arm_event_subscriptions.py`
 
    In order for this sample to workm you will need an Event Grid Topic and a Key (replace global variable in the script)
 
-1. `event_grid_consumer.py` is the code to pu in an Python Azure Function to receive and event from EventGrid
+1. You can deploy the `ConsumerFunction` folder to an Azure Function using [VSCode](https://aka.ms/vscode-azure-functions), this folder is ready to deploy. See the Readme in that directory for details.
+
+   If you just want the code, look at `ConsumerFunction/ConsumerFunction/run.py` which is the code receive and event from EventGrid
+
+   Creating an Azure Function is out of the scope of this sample, you can follow [CLI tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+   or [Portal tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function) or using [VSCode](https://aka.ms/vscode-azure-functions).
 
 ## Resources
 
