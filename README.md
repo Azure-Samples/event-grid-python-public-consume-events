@@ -1,7 +1,7 @@
 ---
 services: event-grid
 platforms: python
-author: kalyanaj, lmazuel
+author: lmazuel
 ---
 
 # Microsoft Azure Event Grid Publish/Consume Samples for Python
