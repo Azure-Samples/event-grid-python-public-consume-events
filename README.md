@@ -67,7 +67,12 @@ Run the sample : `pipenv run create_arm_event_subscriptions.py`
 
 ### Data plane
 
+1. `event_grid_publisher.py` publishes a custom event to a Topic. Topic might be created by the initial sample `create_eg_topics_and_event_subscriptions.py`
+   or [CLI](https://docs.microsoft.com/azure/event-grid/custom-event-quickstart#create-a-custom-topic).
 
+   In order for this sample to workm you will need an Event Grid.
+
+1. `event_grid_consumer.py` is the code to pu in an Python Azure Function to receive and event from EventGrid
 
 ## Resources
 
