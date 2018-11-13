@@ -51,6 +51,8 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
    In order for this sample to work, you need to have a valid `.env` file (see previous section).
 
+   **This sample requires a endpoint that supports EventGrid security validation. See https://aka.ms/esvalidation for details**
+
    Run the sample : `pipenv run python create_eg_topics_and_event_subscriptions.py`
 
 2. `create_storage_event_subscriptions.py` creates a new event subscription for a storage account, filtering jpg creation, and send it to an Relay Hybrid Connection
