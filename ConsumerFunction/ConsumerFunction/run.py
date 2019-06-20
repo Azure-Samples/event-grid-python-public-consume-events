@@ -29,7 +29,8 @@ for event in postreqdata:
 
     if event['eventType'] == SUBSCRIPTION_VALIDATION_EVENT:
         validation_code = event_data['validationCode']
-        validation_url = event_data.get('validationUrl', None) # If you don't use the preview version of EventGrid, this might no exist
+        # If you don't use the preview version of EventGrid, this might no exist
+        validation_url = event_data.get('validationUrl', None)
         print("Got a SubscriptionValidation event data, validation code is: {}, validation url is {}".format(
             validation_code,
             validation_url
@@ -39,8 +40,10 @@ for event in postreqdata:
         }
         response.write(json.dumps(answer_payload))
     elif event['eventType'] == STORAGE_BLOB_CREATED_EVENT:
-        print("Got BlobCreated event data, blob URI {}".format(event_data['url']))
+        print("Got BlobCreated event data, blob URI {}".format(
+            event_data['url']))
     elif event['eventType'] == CUSTOM_EVENT:
-        print("Got a custom event {} and received {}".format(CUSTOM_EVENT, event_data))
+        print("Got a custom event {} and received {}".format(
+            CUSTOM_EVENT, event_data))
 
 response.close()

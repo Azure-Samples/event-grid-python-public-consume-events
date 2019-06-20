@@ -24,7 +24,7 @@ GROUP_NAME = 'event-grid-python-sample-rg'
 TOPIC_NAME = "topicsample-" + _haikunator.haikunate(delimiter='')
 
 # In this sample, we will be creating an event subscription to this storage account.
-# Specify the Azure resource ID of an already existing storage account. The account must be 
+# Specify the Azure resource ID of an already existing storage account. The account must be
 # a General Purpose V2 Storage account or a Blob Storage account.
 # This should be in the format /subscriptions/id/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/account1
 # More info on Storage as an event source is at https://docs.microsoft.com/en-us/azure/event-grid/event-sources#storage
@@ -47,6 +47,8 @@ HYBRID_CONNECTION_RESOURCE_ID = 'replace-with-your-hybrid-connection-resource-id
 # AZURE_CLIENT_SECRET: with your Azure Active Directory Application Secret
 # AZURE_SUBSCRIPTION_ID: with your Azure Subscription Id
 #
+
+
 def run_example():
     """Resource Group management example."""
     #
@@ -54,7 +56,7 @@ def run_example():
     #
     subscription_id = os.environ.get(
         'AZURE_SUBSCRIPTION_ID',
-        '11111111-1111-1111-1111-111111111111') # your Azure Subscription Id
+        '11111111-1111-1111-1111-111111111111')  # your Azure Subscription Id
     credentials = ServicePrincipalCredentials(
         client_id=os.environ['AZURE_CLIENT_ID'],
         secret=os.environ['AZURE_CLIENT_SECRET'],
@@ -72,7 +74,8 @@ def run_example():
     print_item(resource_group)
 
     # Creating an event subscription to storage account {StorageAccountResourceId} with destination as {HybridConnectionResourceId}
-    print('\nCreating an event subscription to storage account {} with destination as {}'.format(STORAGE_ACOUNT_RESOURCE_ID, HYBRID_CONNECTION_RESOURCE_ID))
+    print('\nCreating an event subscription to storage account {} with destination as {}'.format(
+        STORAGE_ACOUNT_RESOURCE_ID, HYBRID_CONNECTION_RESOURCE_ID))
     event_subscription_name = 'EventSubscription1'
     destination = HybridConnectionEventSubscriptionDestination(
         resource_id=HYBRID_CONNECTION_RESOURCE_ID
@@ -84,7 +87,8 @@ def run_example():
         subject_ends_with='.jpg'
     )
 
-    event_subscription_info = EventSubscription(destination=destination, filter=filter)
+    event_subscription_info = EventSubscription(
+        destination=destination, filter=filter)
 
     event_subscription_async_poller = event_grid_client.event_subscriptions.create_or_update(
         STORAGE_ACOUNT_RESOURCE_ID,
@@ -112,6 +116,7 @@ def run_example():
     delete_async_operation.wait()
     print("\nDeleted: {}".format(GROUP_NAME))
 
+
 def print_item(group):
     """Print a ResourceGroup instance."""
     print("\tName: {}".format(group.name))
@@ -120,12 +125,14 @@ def print_item(group):
         print("\tLocation: {}".format(group.location))
     print_properties(getattr(group, 'properties', None))
 
+
 def print_properties(props):
     """Print a ResourceGroup propertyies instance."""
     if props and hasattr(props, 'provisioning_state'):
         print("\tProperties:")
         print("\t\tProvisioning State: {}".format(props.provisioning_state))
     print("\n\n")
+
 
 if __name__ == "__main__":
     run_example()
