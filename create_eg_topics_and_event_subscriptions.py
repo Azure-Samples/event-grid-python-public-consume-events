@@ -50,7 +50,7 @@ def run_example():
     #
     subscription_id = os.environ.get(
         'AZURE_SUBSCRIPTION_ID',
-        '11111111-1111-1111-1111-111111111111') # your Azure Subscription Id
+        '11111111-1111-1111-1111-111111111111')  # your Azure Subscription Id
     credentials = ServicePrincipalCredentials(
         client_id=os.environ['AZURE_CLIENT_ID'],
         secret=os.environ['AZURE_CLIENT_SECRET'],
@@ -102,7 +102,8 @@ def run_example():
         subject_ends_with=''
     )
 
-    event_subscription_info = EventSubscription(destination=destination, filter=filter)
+    event_subscription_info = EventSubscription(
+        destination=destination, filter=filter)
 
     event_subscription_async_poller = event_grid_client.event_subscriptions.create_or_update(
         topic.id,
@@ -139,6 +140,7 @@ def run_example():
     delete_async_operation.wait()
     print("\nDeleted: {}".format(GROUP_NAME))
 
+
 def print_item(group):
     """Print a ResourceGroup instance."""
     print("\tName: {}".format(group.name))
@@ -147,12 +149,14 @@ def print_item(group):
         print("\tLocation: {}".format(group.location))
     print_properties(getattr(group, 'properties', None))
 
+
 def print_properties(props):
     """Print a ResourceGroup propertyies instance."""
     if props and hasattr(props, 'provisioning_state'):
         print("\tProperties:")
         print("\t\tProvisioning State: {}".format(props.provisioning_state))
     print("\n\n")
+
 
 if __name__ == "__main__":
     run_example()

@@ -15,21 +15,23 @@ TOPIC_ENDPOINT = "<topic-name>.<region>-1.eventgrid.azure.net"
 # Enter value for <topic-key>
 EVENT_GRID_KEY = '<topic-key>'
 
+
 def build_events_list():
     # type: () -> List[EventGridEvent]
     result = []
     for i in range(1):
         result.append(EventGridEvent(
-            id= uuid.uuid4(),
-            subject= "My subject {}".format(i),
-            data= {
+            id=uuid.uuid4(),
+            subject="My subject {}".format(i),
+            data={
                 'key': 'I accept any kind of data here, this is free dictionnary'
             },
-            event_type= 'PersonalEventType',
-            event_time= datetime.datetime.now(),
-            data_version= 2.0
+            event_type='PersonalEventType',
+            event_time=datetime.datetime.now(),
+            data_version=2.0
         ))
     return result
+
 
 def run_example():
 
@@ -43,5 +45,7 @@ def run_example():
     )
     print("Published events to Event Grid.")
 
+
 if __name__ == "__main__":
     run_example()
+()
