@@ -24,7 +24,7 @@ def build_events_list():
             id=uuid.uuid4(),
             subject="My subject {}".format(i),
             data={
-                'key': 'I accept any kind of data here, this is free dictionnary'
+                'key': 'I accept any kind of data here, this is a free dictionary'
             },
             event_type='PersonalEventType',
             event_time=datetime.datetime.now(),
