@@ -1,7 +1,11 @@
 ---
-services: event-grid
-platforms: python
-author: lmazuel
+page_type: sample
+languages:
+- python
+products:
+- azure
+description: "This contains Python samples for publishing events to Azure Event Grid and consuming events from Azure Event Grid."
+urlFragment: event-grid-python-public-consume-events
 ---
 
 # Microsoft Azure Event Grid Publish/Consume Samples for Python
