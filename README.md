@@ -85,8 +85,8 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
    If you just want the code, look at `ConsumerFunction/ConsumerFunction/run.py`.
 
-   Creating an Azure Function is out of the scope of this sample, you can follow [CLI tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-   or [Portal tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function) or using [VSCode](https://aka.ms/vscode-azure-functions).
+   Creating an Azure Function is out of the scope of this sample, you can follow [CLI tutorial](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+   or [Portal tutorial](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function) or using [VSCode](https://aka.ms/vscode-azure-functions).
 
 ## Resources
 
