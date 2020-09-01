@@ -73,20 +73,7 @@ The above three samples use the Event Grid management plane SDK [azure-mgmt-even
 
 ### Data plane
 
-1. `event_grid_publisher.py` publishes a custom event to a Topic. Topic might be created by the initial sample `create_eg_topics_and_event_subscriptions.py`
-   or [CLI](https://docs.microsoft.com/azure/event-grid/custom-event-quickstart#create-a-custom-topic).
-
-   In order for this sample to work, you need an Event Grid Topic and a Key (replace global variables in the script)
-
-   Run the sample : `pipenv run python event_grid_publisher.py`
-
-2. `ConsumerFunction` is an Azure Function app that receive an event from EventGrid. You can deploy the `ConsumerFunction` folder to an Azure Function using [VSCode](https://aka.ms/vscode-azure-functions),
-   this folder is ready to deploy. See the Readme in that directory for details.
-
-   If you just want the code, look at `ConsumerFunction/ConsumerFunction/run.py`.
-
-   Creating an Azure Function is out of the scope of this sample, you can follow [CLI tutorial](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-   or [Portal tutorial](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function) or using [VSCode](https://aka.ms/vscode-azure-functions).
+The dataplane samples have been moved [here](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/eventgrid/azure-eventgrid/samples). Please follow the link.
 
 ## Resources
 
