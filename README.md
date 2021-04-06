@@ -8,7 +8,9 @@ description: "This contains Python samples for publishing events to Azure Event 
 urlFragment: event-grid-python-public-consume-events
 ---
 
-***DISCLAIMER: The data plane samples in this repo are for azure-eventgrid v1 (1.x). For the samples for v2 (2.x and above) please visit [here](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/eventgrid/azure-eventgrid/samples). This repo will be archived once the v2 becomes stable.***
+***DISCLAIMER: The data plane samples in this repo are for azure-eventgrid v1 (1.x). For the samples for v4 (4.x and above) please visit [here](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/eventgrid/azure-eventgrid/samples). This repo is archived since v4 has become stable. For management plane samples, please visit this [here](https://github.com/Azure-Samples/azure-samples-python-management/tree/master/samples/eventgrid).***
+
+***DISCLAIMER: If you are looking to migrate from azure-eventgrid v1(1.x) to v4(4.x), we suggest getting started at the [migration guide](https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/eventgrid/azure-eventgrid/migration_guide.md).***
 
 
 # Microsoft Azure Event Grid Publish/Consume Samples for Python
